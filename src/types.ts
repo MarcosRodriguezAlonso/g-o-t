@@ -1,30 +1,28 @@
-type LevelRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-
-type Character = {
+export interface Character {
   name: string;
   surname: string;
   age: number;
   status: "Dead" | "Alive";
-};
+}
 
-type King = Character & {
+export interface King extends Character {
   yearsReigning: number;
   sentence: "Vais a morir todos";
-};
+}
 
-type Fighter = Character & {
+export interface Fighter extends Character {
   weapon: string;
-  dexterityLevel: LevelRange;
+  dexterityLevel: 2;
   sentence: "Primero pego y luego pregunto";
-};
+}
 
-type Squire = Character & {
+export interface Squire extends Character {
   characterWhomServes: Fighter;
-  asslickerLevel: LevelRange;
+  asslickerLevel: 2;
   sentence: "Soy un loser";
-};
+}
 
-type Adviser = Character & {
+export interface Adviser extends Character {
   characterWhomAdvises: Squire | Fighter | King | Adviser;
   sentence: "No sé por qué, pero creo que voy a morir pronto";
-};
+}
