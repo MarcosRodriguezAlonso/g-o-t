@@ -7,7 +7,7 @@ import type {
   Sentence,
 } from "./types.js";
 
-const sentences: Sentence = [
+export const sentences: Sentence = [
   "Vais a morir todos",
   "Primero pego y luego pregunto",
   "Soy un loser",
@@ -26,14 +26,14 @@ export const createKingCharacter = (
   isAlive: true,
   yearsReigning,
   die(this: King) {
-    return this.isAlive;
+    this.isAlive = false;
   },
   speak() {
-    return sentences[1];
+    return sentences[0];
   },
 });
 
-/* Const createFighter = (name: string, surname: string, ); */
+console.log(createKingCharacter("Marcos", "Rodri", 40, 235));
 
 const joffreyBaratheon: King = createKingCharacter(
   "Joffrey",
