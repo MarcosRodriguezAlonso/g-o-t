@@ -27,7 +27,7 @@ describe("Given the function createFighterCharacter", () => {
     });
   });
   describe("When it recibes a 0 years old character called John Cena who uses an axe and has 0 points of dexterity", () => {
-    test("Then it should throw the error 'Error: the amount of years must be a number bigger than 0'", () => {
+    test("Then it should throw the error 'Error: the numbers must be bigger than 0'", () => {
       const name = "John";
       const surname = "Cena";
       const age = 0;
@@ -35,7 +35,7 @@ describe("Given the function createFighterCharacter", () => {
 
       expect(() =>
         createFighterCharacter({ name, surname, age }, 5, "Axe"),
-      ).toThrow("Error: the amount of years must be a number bigger than 0");
+      ).toThrow("Error: the numbers must be bigger than 0");
     });
   });
 });

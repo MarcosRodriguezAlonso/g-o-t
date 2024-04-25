@@ -8,9 +8,7 @@ export const createKingCharacter = (
   yearsReigning: number,
 ): King => {
   if (age <= 0 || yearsReigning <= 0) {
-    throw new Error(
-      "Error: the amount of years must be a number bigger than 0",
-    );
+    throw new Error("Error: the numbers must be bigger than 0");
   }
 
   return {
@@ -35,9 +33,7 @@ export const createFighterCharacter = (
   weapon: string,
 ): Fighter => {
   if (character.age <= 0 || dexterityLevel <= 0) {
-    throw new Error(
-      "Error: the amount of years must be a number bigger than 0",
-    );
+    throw new Error("Error: the numbers must be bigger than 0");
   }
 
   return {
