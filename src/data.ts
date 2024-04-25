@@ -7,40 +7,11 @@ import type {
   Sentence,
 } from "./types.js";
 
-export const sentences: Sentence = [
-  "Vais a morir todos",
-  "Primero pego y luego pregunto",
-  "Soy un loser",
-  "No sé por qué, pero creo que voy a morir pronto",
-];
-
-export const createKingCharacter = (
-  name: string,
-  surname: string,
-  age: number,
-  yearsReigning: number,
-): King => ({
-  name,
-  surname,
-  age,
-  isAlive: true,
-  yearsReigning,
-  die(this: King) {
-    this.isAlive = false;
-  },
-  speak() {
-    return sentences[0];
-  },
-});
-
-console.log(createKingCharacter("Marcos", "Rodri", 40, 235));
-
-const joffreyBaratheon: King = createKingCharacter(
-  "Joffrey",
-  "Baratheon",
-  14,
-  2,
-);
+export const kingSentence = "Vais a morir todos";
+export const fighterSentence = "Primero pego y luego pregunto";
+export const squireSentence = "Soy un loser";
+export const adviserSentence =
+  "No sé por qué, pero creo que voy a morir pronto";
 
 const jaimeLannister: Fighter = {
   name: "Jaime",
@@ -49,7 +20,7 @@ const jaimeLannister: Fighter = {
   isAlive: true,
   dexterityLevel: 8,
   weapon: "Espada",
-  speak: () => sentences[2],
+  speak: () => fighterSentence,
   die(this: Fighter) {
     jaimeLannister.isAlive = false;
   },
@@ -62,7 +33,7 @@ const daenerysTargaryen: Fighter = {
   isAlive: true,
   dexterityLevel: 6,
   weapon: "Fire",
-  speak: () => sentences[2],
+  speak: () => fighterSentence,
   die() {
     daenerysTargaryen.isAlive = false;
   },
@@ -74,7 +45,7 @@ const tyrionLannister: Adviser = {
   age: 30,
   isAlive: true,
   characterWhomAdvises: daenerysTargaryen,
-  speak: () => sentences[4],
+  speak: () => adviserSentence,
   die() {
     tyrionLannister.isAlive = false;
   },
@@ -87,16 +58,8 @@ const bronn: Squire = {
   isAlive: true,
   characterWhomServes: jaimeLannister,
   asslickerLevel: 10,
-  speak: () => sentences[3],
+  speak: () => squireSentence,
   die() {
     bronn.isAlive = false;
   },
 };
-
-export const characters: Character[] = [
-  joffreyBaratheon,
-  jaimeLannister,
-  daenerysTargaryen,
-  tyrionLannister,
-  bronn,
-];
