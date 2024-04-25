@@ -1,5 +1,12 @@
-import { type King } from "./types";
-import { kingSentence } from "./data";
+import type {
+  BasicCharacter,
+  Level,
+  Fighter,
+  Character,
+  Sentence,
+  King,
+} from "./types";
+import { fighterSentence, kingSentence } from "./data";
 
 export const createKingCharacter = (
   name: string,
@@ -28,3 +35,23 @@ export const createKingCharacter = (
     },
   };
 };
+
+export const createFighterCharacter = (
+  character: BasicCharacter,
+  dexterityLevel: Level,
+  weapon: string,
+): Fighter => ({
+  name: character.name,
+  surname: character.surname,
+  age: character.age,
+  isAlive: true,
+  sentence: fighterSentence,
+  dexterityLevel,
+  weapon,
+  die(this: Fighter) {
+    this.isAlive = false;
+  },
+  speak() {
+    return fighterSentence;
+  },
+});
