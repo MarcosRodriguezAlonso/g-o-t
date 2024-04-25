@@ -1,11 +1,16 @@
 type Level = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-export type Sentence = string[];
+export type Sentence =
+  | "Vais a morir todos"
+  | "Primero pego y luego pregunto"
+  | "Soy un loser"
+  | "No sé por qué, pero creo que voy a morir pronto";
 
 export interface Character {
   name: string;
   surname: string;
   age: number;
   isAlive: boolean;
+  sentence: Sentence;
   die: () => void;
   speak: () => string;
 }

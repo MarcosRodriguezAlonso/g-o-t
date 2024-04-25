@@ -11,21 +11,20 @@ export const createKingCharacter = (
     throw new Error(
       "Error: the amount of years must be a number bigger than 0",
     );
-  } else {
-    return {
-      name,
-      surname,
-      age,
-      isAlive: true,
-      yearsReigning,
-      die(this: King) {
-        this.isAlive = false;
-      },
-      speak() {
-        return kingSentence;
-      },
-    };
   }
-};
 
-console.log(createKingCharacter("Marcos", "Rodr", 0, 0));
+  return {
+    name,
+    surname,
+    age,
+    isAlive: true,
+    sentence: "Vais a morir todos",
+    yearsReigning,
+    die(this: King) {
+      this.isAlive = false;
+    },
+    speak() {
+      return kingSentence;
+    },
+  };
+};
