@@ -28,7 +28,7 @@ describe("Given the fucntion createKingCharacter", () => {
   });
 
   describe("When it recibes the name Marcos, the surname Rodríguez, the  age of -10, and the years reigning 0", () => {
-    test("Then it should throw the error 'Error: the amount of years must be a number bigger than 0'", () => {
+    test("Then it should throw the error 'Error: the numbers must be bigger than 0'", () => {
       const yearsReigning = 0;
       const age = -10;
       const surname = "Rodríguez";
@@ -36,7 +36,7 @@ describe("Given the fucntion createKingCharacter", () => {
 
       expect(() =>
         createKingCharacter(name, surname, age, yearsReigning),
-      ).toThrow("Error: the amount of years must be a number bigger than 0");
+      ).toThrow("Error: the numbers must be bigger than 0");
     });
   });
 });

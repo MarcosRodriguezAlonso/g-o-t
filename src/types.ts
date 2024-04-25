@@ -1,5 +1,6 @@
-type Level = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+export type Level = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 export type Sentence =
+  | ""
   | "Vais a morir todos"
   | "Primero pego y luego pregunto"
   | "Soy un loser"
@@ -13,6 +14,12 @@ export interface Character {
   sentence: Sentence;
   die: () => void;
   speak: () => string;
+}
+
+export interface BasicCharacter {
+  name: string;
+  surname: string;
+  age: number;
 }
 
 export interface King extends Character {
