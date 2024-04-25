@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watchAll",
@@ -30,9 +31,8 @@
     "prettier": "3.2.5",
     "serve": "^14.2.1",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.4.5"
-  },
-  "dependencies": {
+    "typescript": "^5.4.5",
     "eslint-config-prettier": "^9.1.0"
-  }
+  },
+  "dependencies": {}
 }
