@@ -1,11 +1,4 @@
-import type {
-  BasicCharacter,
-  Level,
-  Fighter,
-  Character,
-  Sentence,
-  King,
-} from "./types";
+import type { BasicCharacter, Level, Fighter, King } from "./types";
 import { fighterSentence, kingSentence } from "./data";
 
 export const createKingCharacter = (
@@ -40,18 +33,26 @@ export const createFighterCharacter = (
   character: BasicCharacter,
   dexterityLevel: Level,
   weapon: string,
-): Fighter => ({
-  name: character.name,
-  surname: character.surname,
-  age: character.age,
-  isAlive: true,
-  sentence: fighterSentence,
-  dexterityLevel,
-  weapon,
-  die(this: Fighter) {
-    this.isAlive = false;
-  },
-  speak() {
-    return fighterSentence;
-  },
-});
+): Fighter => {
+  if (character.age <= 0 || dexterityLevel <= 0) {
+    throw new Error(
+      "Error: the amount of years must be a number bigger than 0",
+    );
+  }
+
+  return {
+    name: character.name,
+    surname: character.surname,
+    age: character.age,
+    isAlive: true,
+    sentence: fighterSentence,
+    dexterityLevel,
+    weapon,
+    die(this: Fighter) {
+      this.isAlive = false;
+    },
+    speak() {
+      return fighterSentence;
+    },
+  };
+};
