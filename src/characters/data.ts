@@ -10,6 +10,16 @@ export const squireSentence = "Soy un loser";
 export const adviserSentence =
   "No sé por qué, pero creo que voy a morir pronto";
 
+const getCharactersSentences = (charactersList: Character[]): string[] => {
+  const sentencesList: string[] = [];
+
+  charactersList.forEach((character) => {
+    sentencesList.push(character.sentence);
+  });
+
+  return sentencesList;
+};
+
 export const joffreyBaratheon = createKingCharacter(
   "Joffrey",
   "Baratheon",
