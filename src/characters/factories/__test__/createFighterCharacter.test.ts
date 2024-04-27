@@ -1,6 +1,6 @@
-import { createFighterCharacter } from "./charactersFactory";
-import { fighterSentence } from "./data";
-import { type Fighter } from "./types";
+import { createFighterCharacter } from "../charactersFactory";
+import { fighterSentence } from "../data";
+import { type Fighter } from "../types";
 
 describe("Given the function createFighterCharacter", () => {
   describe("When it recibes a 20 years old character called John Cena who uses an axe and has 5 points of dexterity", () => {
@@ -32,9 +32,10 @@ describe("Given the function createFighterCharacter", () => {
       const surname = "Cena";
       const age = 0;
       const dexterityLevel = 0;
+      const weapon = "Axe";
 
       expect(() =>
-        createFighterCharacter({ name, surname, age }, 5, "Axe"),
+        createFighterCharacter({ name, surname, age }, dexterityLevel, weapon),
       ).toThrow("Error: the numbers must be bigger than 0");
     });
   });
