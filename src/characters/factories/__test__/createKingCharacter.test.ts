@@ -1,5 +1,5 @@
-import { createKingCharacter } from "./charactersFactory";
-import { type King } from "./types";
+import { createKingCharacter } from "../charactersFactory";
+import { type King } from "../types";
 
 describe("Given the fucntion createKingCharacter", () => {
   describe("When it reciebes the name Marcos, the surname Rodríguez, the age 29, and the years reigning 2", () => {
