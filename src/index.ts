@@ -1,1 +1,3 @@
-import { joffreyBaratheon, jaimeLannister } from "./characters/data";
+import { characterSentences } from "./characters/data";
+
+console.log(characterSentences);
