@@ -1,1 +1,3 @@
-import { characterSentences } from "./characters/data";
+import { renderGeneralLayout } from "./ui";
+
+renderGeneralLayout("Game of Thrones");
