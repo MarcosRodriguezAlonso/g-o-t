@@ -33,3 +33,5 @@ export const jaimeLannister = createFighterCharacter(
 );
 
 const characters: Character[] = [joffreyBaratheon, jaimeLannister];
+
+export const characterSentences: string[] = getCharactersSentences(characters);
