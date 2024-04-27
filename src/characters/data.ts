@@ -23,5 +23,3 @@ export const jaimeLannister = createFighterCharacter(
 );
 
 const characters: Character[] = [joffreyBaratheon, jaimeLannister];
-
-const makeCharactersSpeak = (charactersList: Character[]): [] => {};
