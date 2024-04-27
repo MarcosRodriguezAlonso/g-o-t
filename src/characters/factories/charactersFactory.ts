@@ -1,5 +1,5 @@
 import type { BasicCharacter, Level, Fighter, King } from "./types";
-import { fighterSentence, kingSentence } from "./data";
+import { fighterSentence, kingSentence } from "../data";
 
 export const createKingCharacter = (
   name: string,
