@@ -1,4 +1,4 @@
-export const getMainHeader = (webTitle: string) => {
+export const getMainHeader = (webTitle: string): HTMLElement => {
   const mainHeader = document.createElement("header");
   const title = document.createElement("h1");
 
@@ -6,4 +6,6 @@ export const getMainHeader = (webTitle: string) => {
   title.textContent = webTitle;
 
   mainHeader.appendChild(title);
+
+  return mainHeader;
 };

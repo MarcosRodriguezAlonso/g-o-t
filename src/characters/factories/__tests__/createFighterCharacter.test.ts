@@ -1,5 +1,5 @@
 import { createFighterCharacter } from "../charactersFactory";
-import { fighterSentence } from "../../data";
+import { fighterSentence } from "../charactersFactory";
 import { type Fighter } from "../types";
 
 describe("Given the function createFighterCharacter", () => {
