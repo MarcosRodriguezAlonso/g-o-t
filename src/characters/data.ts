@@ -1,8 +1,8 @@
 import {
   createKingCharacter,
   createFighterCharacter,
-} from "./factories/charactersFactory";
-import { type Character } from "./factories/types";
+} from "./factories/charactersFactory.js";
+import { type Character } from "./factories/types.js";
 
 const getCharactersSentences = (charactersList: Character[]): string[] => {
   const sentencesList: string[] = [];
@@ -26,6 +26,6 @@ export const jaimeLannister = createFighterCharacter(
   "Sword",
 );
 
-const characters: Character[] = [joffreyBaratheon, jaimeLannister];
+export const characters: Character[] = [joffreyBaratheon, jaimeLannister];
 
 export const characterSentences: string[] = getCharactersSentences(characters);
