@@ -1,5 +1,5 @@
-import { getMainContainer } from "./main-container";
-import { getMainHeader } from "./main-header";
+import { getMainContainer } from "./main-container.js";
+import { getMainHeader } from "./main-header.js";
 
 export const renderGeneralLayout = (webTitle: string): void => {
   const rootElement = document.querySelector(".root");
