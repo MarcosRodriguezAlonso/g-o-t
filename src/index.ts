@@ -1,8 +1,11 @@
 import { renderGeneralLayout } from "./ui/index.js";
-import { getCharacterCard } from "./characters/factories/characterCard.js";
+import { getCharacterCards } from "./characters/factories/characterCard.js";
 import { characters } from "./characters/data.js";
+import { getCardContainer } from "./characters/factories/cardsContainer.js";
 
 renderGeneralLayout("Game of Thrones");
 
-getCharacterCard(characters[0]);
-getCharacterCard(characters[1]);
+getCharacterCards(characters[0]);
+getCharacterCards(characters[1]);
+
+getCardContainer();
