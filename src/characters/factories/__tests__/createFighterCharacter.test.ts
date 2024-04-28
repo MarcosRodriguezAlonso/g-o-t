@@ -8,19 +8,21 @@ describe("Given the function createFighterCharacter", () => {
       const name = "John";
       const surname = "Cena";
       const age = 20;
+      const weapon = "Axe";
+      const dexterityLevel = 5;
       const espectedFighter: Omit<Fighter, "die" | "speak" | "isAlive"> = {
         name,
         surname,
         age,
-        dexterityLevel: 5,
-        weapon: "Axe",
+        dexterityLevel,
+        weapon,
         sentence: fighterSentence,
       };
 
       const createdFighter = createFighterCharacter(
         { name, surname, age },
-        5,
-        "Axe",
+        espectedFighter.dexterityLevel,
+        espectedFighter.weapon,
       );
 
       expect(createdFighter).toMatchObject(espectedFighter);
