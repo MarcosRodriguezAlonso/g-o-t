@@ -10,13 +10,25 @@
   box-sizing: border-box;
 }
 
+.root {
+  width: 600px;
+  height: 100vh;
+}
+
 body {
   background-color: var(--main-background);
   font-family: var(--font-family);
+  display: grid;
+  justify-content: center;
 }
 
 header {
   text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .main-title {
