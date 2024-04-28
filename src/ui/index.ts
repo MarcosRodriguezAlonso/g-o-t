@@ -7,7 +7,7 @@ export const renderGeneralLayout = (webTitle: string): void => {
   const mainHeader = getMainHeader(webTitle);
 
   if (!mainContainer) {
-    throw new Error("patata");
+    throw new Error("Element not found");
   }
 
   if (rootElement) {

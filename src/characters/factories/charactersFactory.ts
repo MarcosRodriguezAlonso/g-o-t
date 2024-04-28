@@ -1,4 +1,4 @@
-import type { BasicCharacter, Level, Fighter, King } from "./types";
+import type { BasicCharacter, Level, Fighter, King } from "./types.ts";
 
 export const kingSentence = "Vais a morir todos";
 export const fighterSentence = "Primero pego y luego pregunto";
