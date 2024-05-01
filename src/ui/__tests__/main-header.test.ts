@@ -1,4 +1,4 @@
-import { getMainHeader } from "./main-header.js";
+import { getMainHeader } from "../main-header.js";
 
 describe("Given the getMainHeader function", () => {
   describe("When is called", () => {
