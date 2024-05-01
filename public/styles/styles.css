@@ -1,7 +1,6 @@
 :root {
   --main-background: #b9540c;
   --font-family: "Montserrat", sans-serif;
-  color: #fff;
 }
 
 *,
@@ -13,12 +12,14 @@
 .root {
   width: 600px;
   height: 100vh;
+  color: #fff;
 }
 
 body {
   background-color: var(--main-background);
   font-family: var(--font-family);
-  display: grid;
+  margin: 0 auto;
+  display: flex;
   justify-content: center;
 }
 
